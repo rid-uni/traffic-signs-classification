@@ -124,7 +124,7 @@ assert(y_test.shape == (12630,43)),'shapes of images is not 12630x43 in test set
 # Data augmentation
 data = ImageDataGenerator(width_shift_range=0.1,
                    height_shift_range=0.1,
-                   zoom_range=0.2,
+                   zoom_range=[1,1.5],
                    rotation_range=0.1,
                    shear_range=10)
 data.fit(x=x_train)
